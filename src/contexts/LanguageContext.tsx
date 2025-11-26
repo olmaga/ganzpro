@@ -55,6 +55,8 @@ const translations = {
     'projects.family': 'Family',
     'projects.impro': 'Improv Theater',
     'projects.tech': 'Tech',
+    'projects.impro.player': 'Me as an improvisor (olidefux)',
+    'projects.impro.zagewahu': 'ZaGeWaHu - Improv for kids',
     
     // Contact
     'contact.title': 'Get in Touch',
@@ -106,6 +108,8 @@ const translations = {
     'projects.family': 'Familie',
     'projects.impro': 'Improtheater',
     'projects.tech': 'Tech',
+    'projects.impro.player': 'Ich als Spieler (olidefux)',
+    'projects.impro.zagewahu': 'ZaGeWaHu - Impro für Kinder',
     
     // Contact
     'contact.title': 'Kontakt',

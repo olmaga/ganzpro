@@ -11,7 +11,8 @@ interface ProjectLink {
 }
 
 interface ProjectItem {
-  name: string;
+  name?: string;
+  nameKey?: string;
   links?: ProjectLink[];
 }
 
@@ -41,7 +42,7 @@ export const ProjectsSection = () => {
       icon: <Theater className="h-5 w-5" />,
       items: [
         {
-          name: 'Ich als Spieler (olidefux)',
+          nameKey: 'projects.impro.player',
           links: [
             { type: 'instagram', url: 'https://instagram.com/olidefux' },
             { type: 'whatsapp', url: 'https://whatsapp.com/channel/0029VaRxmvM002THR30tQY2k' },
@@ -59,7 +60,7 @@ export const ProjectsSection = () => {
           links: [],
         },
         {
-          name: 'ZaGeWaHu - Impro für Kinder',
+          nameKey: 'projects.impro.zagewahu',
           links: [{ type: 'instagram', url: 'https://instagram.com/zagewahu' }],
         },
       ],
@@ -137,7 +138,7 @@ export const ProjectsSection = () => {
                         className="border-l-2 border-primary/30 pl-3 py-1"
                       >
                         <span className="text-foreground font-medium text-sm block mb-1.5">
-                          {item.name}
+                          {item.nameKey ? t(item.nameKey) : item.name}
                         </span>
                         {item.links && item.links.length > 0 && (
                           <div className="flex flex-wrap gap-2">
