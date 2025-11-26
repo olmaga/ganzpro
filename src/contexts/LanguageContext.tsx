@@ -51,7 +51,7 @@ const translations = {
     'experience.doodle.desc': 'Full-stack development for scheduling platform',
     
     // Projects
-    'projects.title': 'What I\'m Working On',
+    'projects.title': 'Where I Invest My Time',
     'projects.family': 'Family',
     'projects.impro': 'Improv Theater',
     'projects.tech': 'Tech',
@@ -102,7 +102,7 @@ const translations = {
     'experience.doodle.desc': 'Full-Stack-Entwicklung für Terminplanungsplattform',
     
     // Projects
-    'projects.title': 'Woran ich arbeite',
+    'projects.title': 'Wo ich meine Zeit investiere',
     'projects.family': 'Familie',
     'projects.impro': 'Improtheater',
     'projects.tech': 'Tech',
