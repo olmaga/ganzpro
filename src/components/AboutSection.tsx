@@ -23,9 +23,6 @@ export function AboutSection() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-lg">
-                <span className="text-2xl">👋</span>
-              </div>
             </div>
           </div>
 
