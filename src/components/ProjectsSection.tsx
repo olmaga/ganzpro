@@ -29,14 +29,14 @@ export const ProjectsSection = () => {
   const projectGroups: ProjectGroup[] = [
     {
       titleKey: 'projects.family',
-      icon: <Heart className="h-6 w-6" />,
+      icon: <Heart className="h-5 w-5" />,
       items: [],
       image: familyCartoon,
       imageAlt: 'Family illustration',
     },
     {
       titleKey: 'projects.impro',
-      icon: <Theater className="h-6 w-6" />,
+      icon: <Theater className="h-5 w-5" />,
       items: [
         {
           name: 'Ich als Spieler (olidefux)',
@@ -66,7 +66,7 @@ export const ProjectsSection = () => {
     },
     {
       titleKey: 'projects.tech',
-      icon: <Code className="h-6 w-6" />,
+      icon: <Code className="h-5 w-5" />,
       items: [
         {
           name: 'Vibe Coding',
@@ -99,61 +99,65 @@ export const ProjectsSection = () => {
           {t('projects.title')}
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {projectGroups.map((group, index) => (
             <div
               key={index}
-              className="group bg-card rounded-2xl p-6 shadow-sm border border-border hover:shadow-lg hover:border-primary/20 transition-all duration-300"
+              className="group bg-card overflow-hidden shadow-sm border border-border hover:shadow-lg transition-all duration-300"
             >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-3 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 text-primary group-hover:scale-110 transition-transform duration-300">
-                  {group.icon}
-                </div>
-                <h3 className="text-xl font-bold">{t(group.titleKey)}</h3>
-              </div>
-
-              <div className="mb-4 overflow-hidden rounded-xl">
+              {/* Full-width image */}
+              <div className="overflow-hidden">
                 <img
                   src={group.image}
                   alt={group.imageAlt}
-                  className="w-full rounded-xl object-cover aspect-square group-hover:scale-105 transition-transform duration-500"
+                  className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
 
-              {group.items.length > 0 && (
-                <ul className="space-y-4">
-                  {group.items.map((item, itemIndex) => (
-                    <li
-                      key={itemIndex}
-                      className="p-3 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
-                    >
-                      <span className="text-foreground font-medium block mb-2">
-                        {item.name}
-                      </span>
-                      {item.links && item.links.length > 0 && (
-                        <div className="flex flex-wrap gap-2">
-                          {item.links.map((link, linkIndex) => (
-                            <a
-                              key={linkIndex}
-                              href={link.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-background border border-border hover:border-primary hover:text-primary transition-colors"
-                            >
-                              {getLinkIcon(link.type)}
-                              <span>
-                                {link.label || (link.type === 'website'
-                                  ? new URL(link.url).hostname.replace('www.', '')
-                                  : link.type)}
-                              </span>
-                            </a>
-                          ))}
-                        </div>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              )}
+              {/* Content */}
+              <div className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="text-primary">
+                    {group.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-primary">{t(group.titleKey)}</h3>
+                </div>
+
+                {group.items.length > 0 && (
+                  <ul className="space-y-3">
+                    {group.items.map((item, itemIndex) => (
+                      <li
+                        key={itemIndex}
+                        className="border-l-2 border-primary/30 pl-3 py-1"
+                      >
+                        <span className="text-foreground font-medium text-sm block mb-1.5">
+                          {item.name}
+                        </span>
+                        {item.links && item.links.length > 0 && (
+                          <div className="flex flex-wrap gap-2">
+                            {item.links.map((link, linkIndex) => (
+                              <a
+                                key={linkIndex}
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors"
+                              >
+                                {getLinkIcon(link.type)}
+                                <span>
+                                  {link.label || (link.type === 'website'
+                                    ? new URL(link.url).hostname.replace('www.', '')
+                                    : link.type)}
+                                </span>
+                              </a>
+                            ))}
+                          </div>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             </div>
           ))}
         </div>
