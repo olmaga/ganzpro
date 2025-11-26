@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 
 type Language = 'en' | 'de';
 
@@ -7,6 +7,11 @@ interface LanguageContextType {
   setLanguage: (lang: Language) => void;
   t: (key: string) => string;
 }
+
+const getBrowserLanguage = (): Language => {
+  const browserLang = navigator.language || navigator.languages?.[0] || 'en';
+  return browserLang.toLowerCase().startsWith('de') ? 'de' : 'en';
+};
 
 const translations = {
   en: {
@@ -104,7 +109,7 @@ const translations = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>('de');
+  const [language, setLanguage] = useState<Language>(getBrowserLanguage);
 
   const t = (key: string): string => {
     return translations[language][key as keyof typeof translations['en']] || key;
