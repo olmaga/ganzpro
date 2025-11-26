@@ -74,14 +74,14 @@ const translations = {
     // Hero
     'hero.greeting': 'Hallo, ich bin',
     'hero.name': 'Oliver Ganz',
-    'hero.hook': 'Ich helfe bei Projekten, welche die Welt besser machen.',
+    'hero.hook': 'Ich helfe bei Projekten, welche die Welt verbessern.',
     'hero.cta': 'Begeistere mich von deinem Projekt',
     
     // About
     'about.title': 'Über mich',
     'about.intro': 'Ich lebe für Spontaneität – ob auf der Bühne als Impro-Spieler oder beim Aufbau von Startups.',
     'about.description': 'Nach 10 intensiven, aber extrem guten Jahren habe ich Ende 2024 gemeinsam mit meinem Mitgründer unser Start-up TestingTime verlassen. Wir haben TestingTime aufgebaut, durch 3 Finanzierungsrunden geführt, erfolgreich an Norstat verkauft und zu einer hochprofitablen Firma gemacht. Es war eine unglaubliche Reise.',
-    'about.current': 'Jetzt ist es Zeit für einen neuen Abschnitt. Ich konzentriere mich auf Projekte, die die Welt besser machen, während ich Zeit für Familie, meine zwei kleinen Jungs, meinen Garten und meine Leidenschaft – das Improtheater – finde.',
+    'about.current': 'Jetzt ist es Zeit für einen neuen Abschnitt. Ich konzentriere mich auf Projekte, die die Welt verbessern, während ich Zeit für Familie, meine zwei kleinen Jungs, meinen Garten und meine Leidenschaft – das Improtheater – finde.',
     'about.location': 'Zürich, Schweiz',
     
     // Experience
