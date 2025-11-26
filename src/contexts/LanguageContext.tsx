@@ -43,7 +43,7 @@ const translations = {
     'experience.docbox.role': 'Board Member',
     'experience.docbox.company': 'docbox - Visionary AG',
     'experience.docbox.period': '2022 - Present',
-    'experience.docbox.desc': 'Strategic advisory for medical tech startup',
+    'experience.docbox.desc': 'Strategic advisory for medical tech company',
     
     'experience.doodle.role': 'Senior Software Engineer',
     'experience.doodle.company': 'Doodle AG',
@@ -88,7 +88,7 @@ const translations = {
     'experience.docbox.role': 'Verwaltungsrat',
     'experience.docbox.company': 'docbox - Visionary AG',
     'experience.docbox.period': '2022 - Heute',
-    'experience.docbox.desc': 'Strategische Beratung für MedTech-Startup',
+    'experience.docbox.desc': 'Strategische Beratung für MedTech-Unternehmen',
     
     'experience.doodle.role': 'Senior Software Engineer',
     'experience.doodle.company': 'Doodle AG',
