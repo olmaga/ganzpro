@@ -32,16 +32,16 @@ export function ExperienceSection() {
 
   const experiences = [
     {
-      role: t('experience.testingtime.role'),
-      company: t('experience.testingtime.company'),
-      period: t('experience.testingtime.period'),
-      description: t('experience.testingtime.desc'),
-    },
-    {
       role: t('experience.docbox.role'),
       company: t('experience.docbox.company'),
       period: t('experience.docbox.period'),
       description: t('experience.docbox.desc'),
+    },
+    {
+      role: t('experience.testingtime.role'),
+      company: t('experience.testingtime.company'),
+      period: t('experience.testingtime.period'),
+      description: t('experience.testingtime.desc'),
     },
     {
       role: t('experience.doodle.role'),
