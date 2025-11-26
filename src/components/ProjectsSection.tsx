@@ -21,6 +21,7 @@ interface ProjectGroup {
   items: ProjectItem[];
   image: string;
   imageAlt: string;
+  imagePosition?: 'top' | 'center';
 }
 
 export const ProjectsSection = () => {
@@ -33,6 +34,7 @@ export const ProjectsSection = () => {
       items: [],
       image: familyCartoon,
       imageAlt: 'Family illustration',
+      imagePosition: 'center',
     },
     {
       titleKey: 'projects.impro',
@@ -63,6 +65,7 @@ export const ProjectsSection = () => {
       ],
       image: improTheater,
       imageAlt: 'Improv theater performers',
+      imagePosition: 'top',
     },
     {
       titleKey: 'projects.tech',
@@ -78,6 +81,7 @@ export const ProjectsSection = () => {
       ],
       image: techShows,
       imageAlt: 'impro-shows.ch website screenshot',
+      imagePosition: 'top',
     },
   ];
 
@@ -110,7 +114,9 @@ export const ProjectsSection = () => {
                 <img
                   src={group.image}
                   alt={group.imageAlt}
-                  className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500"
+                  className={`w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500 ${
+                    group.imagePosition === 'top' ? 'object-top' : 'object-center'
+                  }`}
                 />
               </div>
 
