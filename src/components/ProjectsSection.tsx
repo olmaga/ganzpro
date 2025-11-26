@@ -1,6 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Heart, Theater, Code, Instagram, MessageCircle, ExternalLink } from 'lucide-react';
-import familyCartoon from '@/assets/family-cartoon.jpeg';
+import familyCartoon from '@/assets/family-cartoon.png';
 
 interface ProjectItem {
   name: string;
