@@ -1,17 +1,26 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Heart, Theater, Code, Instagram, MessageCircle, ExternalLink } from 'lucide-react';
 import familyCartoon from '@/assets/family-cartoon.png';
+import improTheater from '@/assets/impro-theater.png';
+import techShows from '@/assets/tech-impro-shows.png';
+
+interface ProjectLink {
+  type: 'website' | 'instagram' | 'whatsapp';
+  url: string;
+  label?: string;
+}
 
 interface ProjectItem {
   name: string;
-  links?: { type: 'website' | 'instagram' | 'whatsapp'; url: string }[];
+  links?: ProjectLink[];
 }
 
 interface ProjectGroup {
   titleKey: string;
   icon: React.ReactNode;
   items: ProjectItem[];
-  image?: string;
+  image: string;
+  imageAlt: string;
 }
 
 export const ProjectsSection = () => {
@@ -20,13 +29,14 @@ export const ProjectsSection = () => {
   const projectGroups: ProjectGroup[] = [
     {
       titleKey: 'projects.family',
-      icon: <Heart className="h-6 w-6" />,
+      icon: <Heart className="h-5 w-5" />,
       items: [],
       image: familyCartoon,
+      imageAlt: 'Family illustration',
     },
     {
       titleKey: 'projects.impro',
-      icon: <Theater className="h-6 w-6" />,
+      icon: <Theater className="h-5 w-5" />,
       items: [
         {
           name: 'Ich als Spieler (olidefux)',
@@ -51,19 +61,23 @@ export const ProjectsSection = () => {
           links: [{ type: 'instagram', url: 'https://instagram.com/zagewahu' }],
         },
       ],
+      image: improTheater,
+      imageAlt: 'Improv theater performers',
     },
     {
       titleKey: 'projects.tech',
-      icon: <Code className="h-6 w-6" />,
+      icon: <Code className="h-5 w-5" />,
       items: [
         {
           name: 'Vibe Coding',
           links: [
-            { type: 'website', url: 'https://impro-shows.ch' },
-            { type: 'website', url: 'https://my-tidbits.com' },
+            { type: 'website', url: 'https://impro-shows.ch', label: 'impro-shows.ch' },
+            { type: 'website', url: 'https://my-tidbits.com', label: 'my-tidbits.com' },
           ],
         },
       ],
+      image: techShows,
+      imageAlt: 'impro-shows.ch website screenshot',
     },
   ];
 
@@ -85,63 +99,69 @@ export const ProjectsSection = () => {
           {t('projects.title')}
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="space-y-8 max-w-5xl mx-auto">
           {projectGroups.map((group, index) => (
             <div
               key={index}
-              className="group bg-card rounded-2xl p-6 shadow-sm border border-border hover:shadow-lg hover:border-primary/20 transition-all duration-300"
+              className="group relative overflow-hidden rounded-3xl bg-card border border-border shadow-sm hover:shadow-xl transition-all duration-500"
             >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-3 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 text-primary group-hover:scale-110 transition-transform duration-300">
-                  {group.icon}
+              <div className={`flex flex-col ${index % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+                {/* Image Side */}
+                <div className="md:w-1/2 relative overflow-hidden">
+                  <div className="aspect-[4/3] md:aspect-auto md:h-full">
+                    <img
+                      src={group.image}
+                      alt={group.imageAlt}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold">{t(group.titleKey)}</h3>
+
+                {/* Content Side */}
+                <div className="md:w-1/2 p-6 md:p-8 flex flex-col justify-center">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2.5 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 text-primary">
+                      {group.icon}
+                    </div>
+                    <h3 className="text-2xl font-bold">{t(group.titleKey)}</h3>
+                  </div>
+
+                  {group.items.length > 0 && (
+                    <ul className="space-y-3">
+                      {group.items.map((item, itemIndex) => (
+                        <li
+                          key={itemIndex}
+                          className="p-3 rounded-xl bg-muted/50 hover:bg-muted transition-colors"
+                        >
+                          <span className="text-foreground font-medium block mb-2">
+                            {item.name}
+                          </span>
+                          {item.links && item.links.length > 0 && (
+                            <div className="flex flex-wrap gap-2">
+                              {item.links.map((link, linkIndex) => (
+                                <a
+                                  key={linkIndex}
+                                  href={link.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-background border border-border hover:border-primary hover:text-primary transition-colors"
+                                >
+                                  {getLinkIcon(link.type)}
+                                  <span>
+                                    {link.label || (link.type === 'website'
+                                      ? new URL(link.url).hostname.replace('www.', '')
+                                      : link.type)}
+                                  </span>
+                                </a>
+                              ))}
+                            </div>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </div>
-
-              {group.image && (
-                <div className="mb-4 overflow-hidden rounded-xl">
-                  <img
-                    src={group.image}
-                    alt={t(group.titleKey)}
-                    className="w-full rounded-xl object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-              )}
-
-              {group.items.length > 0 && (
-                <ul className="space-y-4">
-                  {group.items.map((item, itemIndex) => (
-                    <li
-                      key={itemIndex}
-                      className="p-3 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
-                    >
-                      <span className="text-foreground font-medium block mb-2">
-                        {item.name}
-                      </span>
-                      {item.links && item.links.length > 0 && (
-                        <div className="flex flex-wrap gap-2">
-                          {item.links.map((link, linkIndex) => (
-                            <a
-                              key={linkIndex}
-                              href={link.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-background border border-border hover:border-primary hover:text-primary transition-colors"
-                            >
-                              {getLinkIcon(link.type)}
-                              <span>
-                                {link.type === 'website'
-                                  ? new URL(link.url).hostname.replace('www.', '')
-                                  : link.type}
-                              </span>
-                            </a>
-                          ))}
-                        </div>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              )}
             </div>
           ))}
         </div>
