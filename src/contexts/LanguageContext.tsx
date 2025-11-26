@@ -50,6 +50,12 @@ const translations = {
     'experience.doodle.period': '2010 - 2014 · 4+ years',
     'experience.doodle.desc': 'Full-stack development for scheduling platform',
     
+    // Projects
+    'projects.title': 'What I\'m Working On',
+    'projects.family': 'Family',
+    'projects.impro': 'Improv Theater',
+    'projects.tech': 'Tech',
+    
     // Contact
     'contact.title': 'Get in Touch',
     'contact.subtitle': 'Interested in working together on a project that matters?',
@@ -94,6 +100,12 @@ const translations = {
     'experience.doodle.company': 'Doodle AG',
     'experience.doodle.period': '2010 - 2014 · 4+ Jahre',
     'experience.doodle.desc': 'Full-Stack-Entwicklung für Terminplanungsplattform',
+    
+    // Projects
+    'projects.title': 'Woran ich arbeite',
+    'projects.family': 'Familie',
+    'projects.impro': 'Improtheater',
+    'projects.tech': 'Tech',
     
     // Contact
     'contact.title': 'Kontakt',
