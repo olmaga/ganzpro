@@ -19,7 +19,7 @@ const translations = {
     'hero.greeting': 'Hello, I am',
     'hero.name': 'Oliver Ganz',
     'hero.hook': 'I help with projects that make the world better.',
-    'hero.cta': 'Get Convinced',
+    'hero.cta': 'Inspire me with your project',
     
     // About
     'about.title': 'About Me',
@@ -64,7 +64,7 @@ const translations = {
     'hero.greeting': 'Hallo, ich bin',
     'hero.name': 'Oliver Ganz',
     'hero.hook': 'Ich helfe bei Projekten, welche die Welt besser machen.',
-    'hero.cta': 'Jetzt überzeugen',
+    'hero.cta': 'Begeistere mich von deinem Projekt',
     
     // About
     'about.title': 'Über mich',
