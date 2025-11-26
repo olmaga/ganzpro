@@ -89,21 +89,21 @@ export const ProjectsSection = () => {
           {projectGroups.map((group, index) => (
             <div
               key={index}
-              className="bg-card rounded-xl p-6 shadow-sm border border-border hover:shadow-md transition-shadow"
+              className="group bg-card rounded-2xl p-6 shadow-sm border border-border hover:shadow-lg hover:border-primary/20 transition-all duration-300"
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                <div className="p-3 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 text-primary group-hover:scale-110 transition-transform duration-300">
                   {group.icon}
                 </div>
-                <h3 className="text-xl font-semibold">{t(group.titleKey)}</h3>
+                <h3 className="text-xl font-bold">{t(group.titleKey)}</h3>
               </div>
 
               {group.image && (
-                <div className="mb-4">
+                <div className="mb-4 overflow-hidden rounded-xl">
                   <img
                     src={group.image}
                     alt={t(group.titleKey)}
-                    className="w-full rounded-lg object-cover"
+                    className="w-full rounded-xl object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               )}
@@ -111,8 +111,13 @@ export const ProjectsSection = () => {
               {group.items.length > 0 && (
                 <ul className="space-y-4">
                   {group.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex flex-col gap-2">
-                      <span className="text-foreground font-medium">{item.name}</span>
+                    <li
+                      key={itemIndex}
+                      className="p-3 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
+                    >
+                      <span className="text-foreground font-medium block mb-2">
+                        {item.name}
+                      </span>
                       {item.links && item.links.length > 0 && (
                         <div className="flex flex-wrap gap-2">
                           {item.links.map((link, linkIndex) => (
@@ -121,10 +126,10 @@ export const ProjectsSection = () => {
                               href={link.url}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors"
+                              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-background border border-border hover:border-primary hover:text-primary transition-colors"
                             >
                               {getLinkIcon(link.type)}
-                              <span className="text-xs">
+                              <span>
                                 {link.type === 'website'
                                   ? new URL(link.url).hostname.replace('www.', '')
                                   : link.type}
