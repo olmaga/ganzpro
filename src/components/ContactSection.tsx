@@ -34,7 +34,7 @@ export function ContactSection() {
             className="min-w-[200px]"
           >
             <a 
-              href="https://linkedin.com/in/oliverganz" 
+              href="https://linkedin.com/in/oliver-ganz" 
               target="_blank" 
               rel="noopener noreferrer"
             >
