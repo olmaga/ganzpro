@@ -1,5 +1,6 @@
 import { LanguageToggle } from './LanguageToggle';
 import { useLanguage } from '@/contexts/LanguageContext';
+import profileImg from '@/assets/profile.jpg';
 
 export function Header() {
   const { t } = useLanguage();
@@ -11,8 +12,8 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <a href="#" className="font-serif text-xl font-semibold text-foreground hover:text-primary transition-colors">
-          ganz.pro
+        <a href="#" className="hover:opacity-80 transition-opacity">
+          <img src={profileImg} alt="Oliver Ganz" className="h-10 w-10 rounded-full object-cover" />
         </a>
         
         <nav className="hidden md:flex items-center gap-8">
