@@ -1,1 +1,1 @@
-web: ./node_modules/.bin/serve -s dist
+web: npm exec -- serve -s dist
