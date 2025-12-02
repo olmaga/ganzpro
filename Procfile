@@ -1,1 +1,1 @@
-web: npm exec -- serve -s dist
+web: nginx -c /app/nginx.conf -g 'daemon off;'
