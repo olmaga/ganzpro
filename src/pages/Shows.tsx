@@ -146,26 +146,57 @@ function ShowsContent() {
         </section>
 
         {/* Notifications Section */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-8">
-                {t('shows.notifications.title')}
-              </h2>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="outline" size="lg" asChild>
-                  <a href="https://whatsapp.com/channel/0029VaRxmvM002THR30tQY2k" target="_blank" rel="noopener noreferrer">
-                    <MessageCircle className="mr-2 h-5 w-5" />
-                    {t('shows.notifications.whatsapp')}
-                  </a>
-                </Button>
-                <Button variant="outline" size="lg" asChild>
-                  <a href="https://zweierlei-impro.ch" target="_blank" rel="noopener noreferrer">
-                    <Mail className="mr-2 h-5 w-5" />
-                    {t('shows.notifications.newsletter')}
-                  </a>
-                </Button>
-              </div>
+            <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground text-center mb-12">
+              {t('shows.notifications.title')}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              {/* WhatsApp Card */}
+              <a 
+                href="https://whatsapp.com/channel/0029VaRxmvM002THR30tQY2k" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group bg-card border border-border p-8 hover:shadow-lg hover:border-primary/50 transition-all duration-300"
+              >
+                <div className="flex flex-col items-center text-center gap-4">
+                  <div className="w-16 h-16 bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <MessageCircle className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-foreground mb-2">WhatsApp</h3>
+                    <p className="text-muted-foreground text-sm">
+                      {t('shows.notifications.whatsapp')}
+                    </p>
+                  </div>
+                  <span className="text-primary text-sm font-medium group-hover:underline">
+                    {language === 'de' ? 'Kanal abonnieren →' : 'Subscribe to channel →'}
+                  </span>
+                </div>
+              </a>
+
+              {/* Newsletter Card */}
+              <a 
+                href="https://zweierlei-impro.ch" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group bg-card border border-border p-8 hover:shadow-lg hover:border-primary/50 transition-all duration-300"
+              >
+                <div className="flex flex-col items-center text-center gap-4">
+                  <div className="w-16 h-16 bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <Mail className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-foreground mb-2">zweierlei</h3>
+                    <p className="text-muted-foreground text-sm">
+                      {t('shows.notifications.newsletter')}
+                    </p>
+                  </div>
+                  <span className="text-primary text-sm font-medium group-hover:underline">
+                    zweierlei-impro.ch →
+                  </span>
+                </div>
+              </a>
             </div>
           </div>
         </section>
