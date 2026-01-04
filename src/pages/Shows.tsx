@@ -3,7 +3,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { Calendar, Clock, MapPin, Ticket, Users } from 'lucide-react';
+import { Calendar, Clock, MapPin, Ticket, Users, Instagram, Globe } from 'lucide-react';
 import showsBg from '@/assets/shows-bg.jpg';
 
 const shows = [
@@ -11,10 +11,14 @@ const shows = [
     date: '16. Jan. 2026',
     time: '19:30 – 22:00 Uhr',
     title: 'Theatersportliga',
-    group: 'zweierlei',
+    group: {
+      name: 'zweierlei',
+      instagram: 'https://instagram.com/zweierlei.impro',
+      website: 'https://zweierlei-impro.ch',
+    },
     description: {
-      en: 'We play Theatersport.',
-      de: 'Wir spielen Theatersport.',
+      en: 'We play improv comedy.',
+      de: 'Wir spielen Improv Comedy.',
     },
     location: 'Theater Ida, Zürich, Aargauerstrasse 80',
     ticketUrl: 'https://eventfrog.ch/de/p/theater-buehne/theater/ida-theatersport-liga-03-01-2026-de-7352584931850106851.html',
@@ -73,7 +77,13 @@ function ShowsContent() {
                         </div>
                         <div className="flex items-center gap-2">
                           <Users className="h-4 w-4 text-primary" />
-                          <span>{show.group}</span>
+                          <span>{show.group.name}</span>
+                          <a href={show.group.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                            <Instagram className="h-4 w-4" />
+                          </a>
+                          <a href={show.group.website} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                            <Globe className="h-4 w-4" />
+                          </a>
                         </div>
                         <div className="flex items-center gap-2">
                           <MapPin className="h-4 w-4 text-primary" />

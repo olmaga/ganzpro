@@ -59,7 +59,7 @@ const translations = {
     // Projects
     'projects.title': 'Where I Invest My Time',
     'projects.family': 'Family',
-    'projects.impro': 'Improv Theater',
+    'projects.impro': 'Improv Comedy',
     'projects.tech': 'Tech',
     'projects.impro.player': 'Me as an improvisor (olidefux)',
     'projects.impro.zagewahu': 'ZaGeWaHu - Improv for kids',
@@ -118,7 +118,7 @@ const translations = {
     // Projects
     'projects.title': 'Wo ich meine Zeit investiere',
     'projects.family': 'Familie',
-    'projects.impro': 'Improtheater',
+    'projects.impro': 'Improv Comedy',
     'projects.tech': 'Tech',
     'projects.impro.player': 'Ich als Spieler (olidefux)',
     'projects.impro.zagewahu': 'ZaGeWaHu - Impro für Kinder',
