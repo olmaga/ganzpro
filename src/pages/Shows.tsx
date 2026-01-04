@@ -3,12 +3,14 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { Calendar, Clock, MapPin, Ticket, Users, Instagram, Globe } from 'lucide-react';
+import { Clock, MapPin, Ticket, Users, Instagram, Globe, ExternalLink } from 'lucide-react';
 import showsBg from '@/assets/shows-bg.jpg';
 
 const shows = [
   {
-    date: '16. Jan. 2026',
+    day: '16',
+    month: 'Jan',
+    year: '2026',
     time: '19:30 – 22:00 Uhr',
     title: 'Theatersportliga',
     group: {
@@ -20,7 +22,9 @@ const shows = [
       en: 'We play improv comedy.',
       de: 'Wir spielen Improv Comedy.',
     },
-    location: 'Theater Ida, Zürich, Aargauerstrasse 80',
+    venue: 'Theater Ida',
+    address: 'Aargauerstrasse 80, Zürich',
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Theater+Ida+Aargauerstrasse+80+Zürich',
     ticketUrl: 'https://eventfrog.ch/de/p/theater-buehne/theater/ida-theatersport-liga-03-01-2026-de-7352584931850106851.html',
   },
 ];
@@ -56,65 +60,83 @@ function ShowsContent() {
               {shows.map((show, index) => (
                 <article 
                   key={index}
-                  className="bg-card border border-border overflow-hidden hover:shadow-lg transition-shadow"
+                  className="bg-card border border-border overflow-hidden hover:shadow-xl transition-all duration-300"
                 >
-                  <div className="flex flex-col lg:flex-row">
-                    {/* Date Badge */}
-                    <div className="bg-primary text-primary-foreground p-6 lg:p-8 flex flex-col items-center justify-center lg:min-w-[140px]">
-                      <span className="text-3xl md:text-4xl font-bold">16</span>
-                      <span className="text-sm uppercase tracking-wider">Jan 2026</span>
+                  <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr_auto] gap-0">
+                    {/* Date Column */}
+                    <div className="bg-primary text-primary-foreground p-6 lg:p-8 flex lg:flex-col items-center justify-center gap-2 lg:gap-1 lg:min-w-[120px]">
+                      <span className="text-4xl lg:text-5xl font-bold leading-none">{show.day}</span>
+                      <div className="flex lg:flex-col items-center gap-1">
+                        <span className="text-lg font-medium uppercase">{show.month}</span>
+                        <span className="text-sm opacity-80">{show.year}</span>
+                      </div>
                     </div>
                     
-                    {/* Content */}
-                    <div className="flex-1 p-6 md:p-8">
-                      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
-                        <div className="space-y-4 flex-1">
-                          <div>
-                            <h2 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-2">
-                              {show.title}
-                            </h2>
-                            <p className="text-muted-foreground">
-                              {show.description[language]}
-                            </p>
+                    {/* Main Content */}
+                    <div className="p-6 lg:p-8 space-y-5">
+                      {/* Title & Description */}
+                      <div>
+                        <h2 className="text-2xl lg:text-3xl font-serif font-bold text-foreground mb-2">
+                          {show.title}
+                        </h2>
+                        <p className="text-muted-foreground text-lg">
+                          {show.description[language]}
+                        </p>
+                      </div>
+                      
+                      {/* Info Grid */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {/* Time */}
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <Clock className="h-5 w-5 text-primary" />
                           </div>
-                          
-                          {/* Group Info */}
-                          <div className="flex items-center gap-3 bg-muted/50 px-4 py-3 w-fit">
+                          <span className="text-foreground font-medium">{show.time}</span>
+                        </div>
+                        
+                        {/* Group */}
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 bg-primary/10 flex items-center justify-center flex-shrink-0">
                             <Users className="h-5 w-5 text-primary" />
-                            <span className="font-medium text-foreground">{show.group.name}</span>
-                            <div className="flex items-center gap-2 ml-2 border-l border-border pl-3">
-                              <a href={show.group.instagram} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                                <Instagram className="h-4 w-4" />
-                              </a>
-                              <a href={show.group.website} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                                <Globe className="h-4 w-4" />
-                              </a>
-                            </div>
                           </div>
-                          
-                          {/* Details Grid */}
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                            <div className="flex items-center gap-3 text-muted-foreground">
-                              <Clock className="h-4 w-4 text-primary flex-shrink-0" />
-                              <span>{show.time}</span>
-                            </div>
-                            <div className="flex items-center gap-3 text-muted-foreground">
-                              <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
-                              <span>{show.location}</span>
-                            </div>
+                          <div className="flex items-center gap-3">
+                            <span className="text-foreground font-medium">{show.group.name}</span>
+                            <a href={show.group.instagram} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                              <Instagram className="h-4 w-4" />
+                            </a>
+                            <a href={show.group.website} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                              <Globe className="h-4 w-4" />
+                            </a>
                           </div>
                         </div>
                         
-                        {/* CTA */}
-                        <div className="flex-shrink-0">
-                          <Button size="lg" asChild>
-                            <a href={show.ticketUrl} target="_blank" rel="noopener noreferrer">
-                              <Ticket className="mr-2 h-5 w-5" />
-                              {t('shows.tickets')}
-                            </a>
-                          </Button>
-                        </div>
+                        {/* Location */}
+                        <a 
+                          href={show.mapsUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-3 sm:col-span-2 group hover:bg-muted/50 -mx-2 px-2 py-2 transition-colors"
+                        >
+                          <div className="w-10 h-10 bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <MapPin className="h-5 w-5 text-primary" />
+                          </div>
+                          <div className="flex-1">
+                            <span className="text-foreground font-medium block">{show.venue}</span>
+                            <span className="text-muted-foreground text-sm">{show.address}</span>
+                          </div>
+                          <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                        </a>
                       </div>
+                    </div>
+                    
+                    {/* CTA Column */}
+                    <div className="p-6 lg:p-8 flex items-center justify-center lg:border-l border-t lg:border-t-0 border-border bg-muted/30">
+                      <Button size="lg" className="w-full lg:w-auto" asChild>
+                        <a href={show.ticketUrl} target="_blank" rel="noopener noreferrer">
+                          <Ticket className="mr-2 h-5 w-5" />
+                          {t('shows.tickets')}
+                        </a>
+                      </Button>
                     </div>
                   </div>
                 </article>
