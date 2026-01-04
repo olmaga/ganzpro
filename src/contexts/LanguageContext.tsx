@@ -25,6 +25,9 @@ const translations = {
     'shows.title': 'Upcoming Shows',
     'shows.subtitle': 'Catch me live on stage at these upcoming improv performances.',
     'shows.tickets': 'Tickets',
+    'shows.notifications.title': 'Get notified about upcoming shows',
+    'shows.notifications.whatsapp': 'All my shows on this WhatsApp channel',
+    'shows.notifications.newsletter': 'zweierlei newsletter',
     
     // Hero
     'hero.greeting': 'Hello, I am',
@@ -85,6 +88,9 @@ const translations = {
     'shows.title': 'Kommende Shows',
     'shows.subtitle': 'Erlebe mich live auf der Bühne bei diesen kommenden Impro-Aufführungen.',
     'shows.tickets': 'Tickets',
+    'shows.notifications.title': 'Über kommende Shows informiert werden',
+    'shows.notifications.whatsapp': 'Alle meine Shows auf diesem WhatsApp-Kanal',
+    'shows.notifications.newsletter': 'zweierlei Newsletter',
     
     // Hero
     'hero.greeting': 'Hallo, ich bin',
