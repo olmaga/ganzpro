@@ -3,7 +3,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { Clock, MapPin, Ticket, Users, Instagram, Globe, ExternalLink } from 'lucide-react';
+import { Clock, MapPin, Ticket, Users, Instagram, Globe, ExternalLink, MessageCircle, Mail } from 'lucide-react';
 import showsBg from '@/assets/shows-bg.jpg';
 
 const shows = [
@@ -141,6 +141,31 @@ function ShowsContent() {
                   </div>
                 </article>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Notifications Section */}
+        <section className="py-16 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-2xl mx-auto text-center">
+              <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-8">
+                {t('shows.notifications.title')}
+              </h2>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button variant="outline" size="lg" asChild>
+                  <a href="https://whatsapp.com/channel/0029VaRxmvM002THR30tQY2k" target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="mr-2 h-5 w-5" />
+                    {t('shows.notifications.whatsapp')}
+                  </a>
+                </Button>
+                <Button variant="outline" size="lg" asChild>
+                  <a href="https://zweierlei-impro.ch" target="_blank" rel="noopener noreferrer">
+                    <Mail className="mr-2 h-5 w-5" />
+                    {t('shows.notifications.newsletter')}
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </section>
