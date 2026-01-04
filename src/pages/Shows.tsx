@@ -28,12 +28,12 @@ function ShowsContent() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative pt-24 pb-16 md:pt-32 md:pb-24">
+        <section className="relative pt-32 pb-24 md:pt-48 md:pb-32">
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${showsBg})` }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background" />
           <div className="container mx-auto px-4 relative z-10">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-4">
               {t('shows.title')}
