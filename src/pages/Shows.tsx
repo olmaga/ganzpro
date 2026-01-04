@@ -56,48 +56,65 @@ function ShowsContent() {
               {shows.map((show, index) => (
                 <article 
                   key={index}
-                  className="bg-card border border-border rounded-xl p-6 md:p-8 hover:shadow-lg transition-shadow"
+                  className="bg-card border border-border overflow-hidden hover:shadow-lg transition-shadow"
                 >
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
-                    <div className="space-y-4">
-                      <h2 className="text-2xl md:text-3xl font-serif font-semibold text-foreground">
-                        {show.title}
-                      </h2>
-                      <p className="text-muted-foreground">
-                        {show.description[language]}
-                      </p>
-                      <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
-                        <div className="flex items-center gap-2">
-                          <Calendar className="h-4 w-4 text-primary" />
-                          <span>{show.date}</span>
+                  <div className="flex flex-col lg:flex-row">
+                    {/* Date Badge */}
+                    <div className="bg-primary text-primary-foreground p-6 lg:p-8 flex flex-col items-center justify-center lg:min-w-[140px]">
+                      <span className="text-3xl md:text-4xl font-bold">16</span>
+                      <span className="text-sm uppercase tracking-wider">Jan 2026</span>
+                    </div>
+                    
+                    {/* Content */}
+                    <div className="flex-1 p-6 md:p-8">
+                      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+                        <div className="space-y-4 flex-1">
+                          <div>
+                            <h2 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-2">
+                              {show.title}
+                            </h2>
+                            <p className="text-muted-foreground">
+                              {show.description[language]}
+                            </p>
+                          </div>
+                          
+                          {/* Group Info */}
+                          <div className="flex items-center gap-3 bg-muted/50 px-4 py-3 w-fit">
+                            <Users className="h-5 w-5 text-primary" />
+                            <span className="font-medium text-foreground">{show.group.name}</span>
+                            <div className="flex items-center gap-2 ml-2 border-l border-border pl-3">
+                              <a href={show.group.instagram} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                                <Instagram className="h-4 w-4" />
+                              </a>
+                              <a href={show.group.website} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                                <Globe className="h-4 w-4" />
+                              </a>
+                            </div>
+                          </div>
+                          
+                          {/* Details Grid */}
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                            <div className="flex items-center gap-3 text-muted-foreground">
+                              <Clock className="h-4 w-4 text-primary flex-shrink-0" />
+                              <span>{show.time}</span>
+                            </div>
+                            <div className="flex items-center gap-3 text-muted-foreground">
+                              <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
+                              <span>{show.location}</span>
+                            </div>
+                          </div>
                         </div>
-                        <div className="flex items-center gap-2">
-                          <Clock className="h-4 w-4 text-primary" />
-                          <span>{show.time}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Users className="h-4 w-4 text-primary" />
-                          <span>{show.group.name}</span>
-                          <a href={show.group.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                            <Instagram className="h-4 w-4" />
-                          </a>
-                          <a href={show.group.website} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                            <Globe className="h-4 w-4" />
-                          </a>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <MapPin className="h-4 w-4 text-primary" />
-                          <span>{show.location}</span>
+                        
+                        {/* CTA */}
+                        <div className="flex-shrink-0">
+                          <Button size="lg" asChild>
+                            <a href={show.ticketUrl} target="_blank" rel="noopener noreferrer">
+                              <Ticket className="mr-2 h-5 w-5" />
+                              {t('shows.tickets')}
+                            </a>
+                          </Button>
                         </div>
                       </div>
-                    </div>
-                    <div className="flex-shrink-0">
-                      <Button asChild>
-                        <a href={show.ticketUrl} target="_blank" rel="noopener noreferrer">
-                          <Ticket className="mr-2 h-4 w-4" />
-                          {t('shows.tickets')}
-                        </a>
-                      </Button>
                     </div>
                   </div>
                 </article>
