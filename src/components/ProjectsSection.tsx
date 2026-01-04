@@ -1,5 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Heart, Theater, Code, Instagram, MessageCircle, ExternalLink } from 'lucide-react';
+import { Heart, Theater, Code, Instagram, MessageCircle, ExternalLink, Calendar } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 import familyCartoon from '@/assets/family-cartoon.png';
 import improTheater from '@/assets/impro-theater.png';
 import techShows from '@/assets/tech-impro-shows.png';
@@ -23,6 +25,10 @@ interface ProjectGroup {
   image: string;
   imageAlt: string;
   imagePosition?: 'top' | 'center';
+  showButton?: {
+    labelKey: string;
+    to: string;
+  };
 }
 
 export const ProjectsSection = () => {
@@ -67,6 +73,10 @@ export const ProjectsSection = () => {
       image: improTheater,
       imageAlt: 'Improv theater performers',
       imagePosition: 'top',
+      showButton: {
+        labelKey: 'projects.impro.shows',
+        to: '/shows',
+      },
     },
     {
       titleKey: 'projects.tech',
@@ -163,6 +173,15 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
+                )}
+
+                {group.showButton && (
+                  <Button asChild variant="outline" className="w-full mt-4">
+                    <Link to={group.showButton.to}>
+                      <Calendar className="mr-2 h-4 w-4" />
+                      {t(group.showButton.labelKey)}
+                    </Link>
+                  </Button>
                 )}
               </div>
             </div>
