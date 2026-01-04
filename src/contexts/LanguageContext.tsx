@@ -19,6 +19,12 @@ const translations = {
     'nav.about': 'About',
     'nav.experience': 'Experience',
     'nav.contact': 'Contact',
+    'nav.shows': 'Shows',
+    
+    // Shows page
+    'shows.title': 'Upcoming Shows',
+    'shows.subtitle': 'Catch me live on stage at these upcoming improv performances.',
+    'shows.tickets': 'Tickets',
     
     // Hero
     'hero.greeting': 'Hello, I am',
@@ -72,6 +78,12 @@ const translations = {
     'nav.about': 'Über mich',
     'nav.experience': 'Erfahrung',
     'nav.contact': 'Kontakt',
+    'nav.shows': 'Shows',
+    
+    // Shows page
+    'shows.title': 'Kommende Shows',
+    'shows.subtitle': 'Erlebe mich live auf der Bühne bei diesen kommenden Impro-Aufführungen.',
+    'shows.tickets': 'Tickets',
     
     // Hero
     'hero.greeting': 'Hallo, ich bin',
