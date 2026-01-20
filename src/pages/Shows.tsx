@@ -109,9 +109,24 @@ const shows = [
   },
 ];
 
+const monthToNumber: Record<string, number> = {
+  'Jan': 0, 'Feb': 1, 'Mar': 2, 'Apr': 3, 'May': 4, 'Jun': 5,
+  'Jul': 6, 'Aug': 7, 'Sep': 8, 'Oct': 9, 'Nov': 10, 'Dec': 11
+};
+
 function ShowsContent() {
   const { t, language } = useLanguage();
 
+  // Filter out past shows
+  const upcomingShows = shows.filter((show) => {
+    const showDate = new Date(
+      parseInt(show.year),
+      monthToNumber[show.month],
+      parseInt(show.day),
+      23, 59, 59 // End of the show day
+    );
+    return showDate >= new Date();
+  });
   return (
     <div className="min-h-screen">
       <Header />
@@ -137,7 +152,7 @@ function ShowsContent() {
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="space-y-6">
-              {shows.map((show, index) => (
+              {upcomingShows.map((show, index) => (
                 <article 
                   key={index}
                   className="bg-card border border-border overflow-hidden hover:shadow-xl transition-all duration-300"
