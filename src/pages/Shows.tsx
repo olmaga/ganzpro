@@ -28,6 +28,26 @@ const shows = [
     ticketUrl: 'https://eventfrog.ch/de/p/theater-buehne/theater/ida-theatersport-liga-03-01-2026-de-7352584931850106851.html',
   },
   {
+    day: '19',
+    month: 'Feb',
+    year: '2026',
+    time: '20:00 – 22:00 Uhr',
+    title: 'Hunzi-Show',
+    group: {
+      name: "Robert's Freunde",
+      instagram: 'https://www.instagram.com/robbie.illes/',
+      website: '',
+    },
+    description: {
+      en: 'We entertain the Hunziker-Areal in Zürich Örlikon.',
+      de: 'Wir bespassen das Hunziker-Areal in Zürich Örlikon.',
+    },
+    venue: 'Hunzikerareal',
+    address: 'Genossenschaftsstrasse 13, Zürich',
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Hunzikerareal+Genossenschaftsstrasse+13+Zürich',
+    ticketUrl: 'https://robertstagework.com/hunzi-show/',
+  },
+  {
     day: '21',
     month: 'Feb',
     year: '2026',
