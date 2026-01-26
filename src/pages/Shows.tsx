@@ -149,60 +149,58 @@ function ShowsContent() {
         </section>
 
         {/* Shows List */}
-        <section className="py-16 bg-background">
+        <section className="py-10 bg-background">
           <div className="container mx-auto px-4">
-            <div className="space-y-6">
+            <div className="space-y-3">
               {upcomingShows.map((show, index) => (
                 <article 
                   key={index}
-                  className="bg-card border border-border overflow-hidden hover:shadow-xl transition-all duration-300"
+                  className="bg-card border border-border overflow-hidden hover:shadow-lg transition-all duration-300"
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr_auto] gap-0">
                     {/* Date Column */}
-                    <div className="bg-primary text-primary-foreground p-6 lg:p-8 flex lg:flex-col items-center justify-center gap-2 lg:gap-1 lg:min-w-[120px]">
-                      <span className="text-4xl lg:text-5xl font-bold leading-none">{show.day}</span>
-                      <div className="flex lg:flex-col items-center gap-1">
-                        <span className="text-lg font-medium uppercase">{show.month}</span>
-                        <span className="text-sm opacity-80">{show.year}</span>
+                    <div className="bg-primary text-primary-foreground p-4 lg:p-5 flex lg:flex-col items-center justify-center gap-1 lg:min-w-[90px]">
+                      <span className="text-3xl lg:text-4xl font-bold leading-none">{show.day}</span>
+                      <div className="flex lg:flex-col items-center gap-0.5">
+                        <span className="text-sm font-medium uppercase">{show.month}</span>
+                        <span className="text-xs opacity-80">{show.year}</span>
                       </div>
                     </div>
                     
                     {/* Main Content */}
-                    <div className="p-6 lg:p-8 space-y-5">
+                    <div className="p-4 lg:p-5 space-y-3">
                       {/* Title & Description */}
                       <div>
-                        <h2 className="text-2xl lg:text-3xl font-serif font-bold text-foreground mb-2">
+                        <h2 className="text-xl lg:text-2xl font-serif font-bold text-foreground mb-1">
                           {show.title}
                         </h2>
-                        <p className="text-muted-foreground text-lg">
+                        <p className="text-muted-foreground text-sm">
                           {show.description[language]}
                         </p>
                       </div>
                       
-                      {/* Info Grid */}
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {/* Info Row */}
+                      <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
                         {/* Time */}
-                        <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 bg-primary/10 flex items-center justify-center flex-shrink-0">
-                            <Clock className="h-5 w-5 text-primary" />
-                          </div>
-                          <span className="text-foreground font-medium">{show.time}</span>
+                        <div className="flex items-center gap-1.5">
+                          <Clock className="h-4 w-4 text-primary" />
+                          <span className="text-foreground">{show.time}</span>
                         </div>
                         
                         {/* Group */}
-                        <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 bg-primary/10 flex items-center justify-center flex-shrink-0">
-                            <Users className="h-5 w-5 text-primary" />
-                          </div>
-                          <div className="flex items-center gap-3">
-                            <span className="text-foreground font-medium">{show.group.name}</span>
+                        <div className="flex items-center gap-1.5">
+                          <Users className="h-4 w-4 text-primary" />
+                          <span className="text-foreground">{show.group.name}</span>
+                          {show.group.instagram && (
                             <a href={show.group.instagram} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                              <Instagram className="h-4 w-4" />
+                              <Instagram className="h-3.5 w-3.5" />
                             </a>
+                          )}
+                          {show.group.website && (
                             <a href={show.group.website} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                              <Globe className="h-4 w-4" />
+                              <Globe className="h-3.5 w-3.5" />
                             </a>
-                          </div>
+                          )}
                         </div>
                         
                         {/* Location */}
@@ -210,25 +208,20 @@ function ShowsContent() {
                           href={show.mapsUrl} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="flex items-center gap-3 sm:col-span-2 group hover:bg-muted/50 -mx-2 px-2 py-2 transition-colors"
+                          className="flex items-center gap-1.5 group hover:text-primary transition-colors"
                         >
-                          <div className="w-10 h-10 bg-primary/10 flex items-center justify-center flex-shrink-0">
-                            <MapPin className="h-5 w-5 text-primary" />
-                          </div>
-                          <div className="flex-1">
-                            <span className="text-foreground font-medium block">{show.venue}</span>
-                            <span className="text-muted-foreground text-sm">{show.address}</span>
-                          </div>
-                          <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                          <MapPin className="h-4 w-4 text-primary" />
+                          <span className="text-foreground group-hover:text-primary">{show.venue}</span>
+                          <ExternalLink className="h-3 w-3 text-muted-foreground group-hover:text-primary" />
                         </a>
                       </div>
                     </div>
                     
                     {/* CTA Column */}
-                    <div className="p-6 lg:p-8 flex items-center justify-center lg:border-l border-t lg:border-t-0 border-border bg-muted/30">
-                      <Button size="lg" className="w-full lg:w-auto" asChild>
+                    <div className="p-4 lg:p-5 flex items-center justify-center lg:border-l border-t lg:border-t-0 border-border bg-muted/30">
+                      <Button size="default" className="w-full lg:w-auto" asChild>
                         <a href={show.ticketUrl} target="_blank" rel="noopener noreferrer">
-                          <Ticket className="mr-2 h-5 w-5" />
+                          <Ticket className="mr-1.5 h-4 w-4" />
                           {t('shows.tickets')}
                         </a>
                       </Button>
