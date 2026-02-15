@@ -247,6 +247,26 @@ const shows = [
     mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Tobelhofstrasse+231+Zürich',
     ticketUrl: 'https://www.instagram.com/heubode/',
   },
+  {
+    day: '10',
+    month: 'Jun',
+    year: '2026',
+    time: '19:30 – 21:45 Uhr',
+    title: 'Es isch änart zweierlei',
+    group: {
+      name: 'zweierlei & änart',
+      instagram: 'https://www.instagram.com/zweierlei.impro/',
+      website: 'https://www.instagram.com/aenart.impro/',
+    },
+    description: {
+      en: 'zwei(erlei) halves. änart performs a poetic show. zweierlei transforms a conversation into wild associative scenes.',
+      de: 'zwei(erlei) Halbzeiten. änart spielt eine poetische Show. zweierlei verarbeitet ein Gespräch in wilden assoziativen Szenen.',
+    },
+    venue: 'Werk21',
+    address: 'Dynamo, Zürich',
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Dynamo+Werk+21+Zürich',
+    ticketUrl: 'https://www.dynamo.ch/inventar/werk-21',
+  },
 ];
 
 const monthToNumber: Record<string, number> = {
