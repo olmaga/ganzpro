@@ -40,9 +40,7 @@ export function AboutSection() {
               <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
                 <Heart className="w-6 h-6 text-accent-foreground" />
               </div>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                {t('about.description')}
-              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: t('about.description') }} />
             </div>
             
             <div className="flex items-start gap-4">
