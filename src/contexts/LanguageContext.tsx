@@ -38,7 +38,7 @@ const translations = {
     // About
     'about.title': 'About Me',
     'about.intro': 'I thrive on spontaneity – whether on stage as an improv player or building startups.',
-    'about.description': 'After 10 intense but amazing years, I left TestingTime at the end of 2024 together with my co-founder. We built TestingTime, led it through 3 funding rounds, successfully sold it to Norstat, and turned it into a highly profitable company. It was an incredible journey.',
+    'about.description': 'After 10 intense but amazing years, I left <a href="https://www.testingtime.com" target="_blank" rel="noopener noreferrer" class="underline text-primary hover:text-primary/80">TestingTime</a> at the end of 2024 together with my co-founder <a href="https://www.linkedin.com/in/rlaemmler/" target="_blank" rel="noopener noreferrer" class="underline text-primary hover:text-primary/80">Reto Lämmler</a>. We built TestingTime, led it through 3 funding rounds, successfully sold it to Norstat, and turned it into a highly profitable company. It was an incredible journey.',
     'about.current': 'Now it\'s time for a new chapter. I\'m focusing on projects that make the world better, while making time for family, my two boys, my garden, and my passion – improv theater.',
     'about.location': 'Zurich, Switzerland',
     
@@ -101,7 +101,7 @@ const translations = {
     // About
     'about.title': 'Über mich',
     'about.intro': 'Ich lebe für Spontaneität – ob auf der Bühne als Impro-Spieler oder beim Aufbau von Startups.',
-    'about.description': 'Nach 10 intensiven, aber extrem guten Jahren habe ich Ende 2024 gemeinsam mit meinem Mitgründer unser Start-up TestingTime verlassen. Wir haben TestingTime aufgebaut, durch 3 Finanzierungsrunden geführt, erfolgreich an Norstat verkauft und zu einer hochprofitablen Firma gemacht. Es war eine unglaubliche Reise.',
+    'about.description': 'Nach 10 intensiven, aber extrem guten Jahren habe ich Ende 2024 gemeinsam mit meinem Mitgründer <a href="https://www.linkedin.com/in/rlaemmler/" target="_blank" rel="noopener noreferrer" class="underline text-primary hover:text-primary/80">Reto Lämmler</a> unser Start-up <a href="https://www.testingtime.com" target="_blank" rel="noopener noreferrer" class="underline text-primary hover:text-primary/80">TestingTime</a> verlassen. Wir haben TestingTime aufgebaut, durch 3 Finanzierungsrunden geführt, erfolgreich an Norstat verkauft und zu einer hochprofitablen Firma gemacht. Es war eine unglaubliche Reise.',
     'about.current': 'Jetzt ist es Zeit für einen neuen Abschnitt. Ich konzentriere mich auf Projekte, die die Welt verbessern, während ich Zeit für Familie, meine zwei kleinen Jungs, meinen Garten und meine Leidenschaft – das Improtheater – finde.',
     'about.location': 'Zürich, Schweiz',
     
