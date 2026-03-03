@@ -265,7 +265,7 @@ const shows = [
     venue: 'Werk21',
     address: 'Dynamo, Zürich',
     mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Dynamo+Werk+21+Zürich',
-    ticketUrl: 'https://www.dynamo.ch/inventar/werk-21',
+    ticketUrl: 'https://eventfrog.ch/de/p/theater-buehne/comedy-kabarett/mier-sind-aenart-zweierlei-7434192659260938285.html',
   },
 ];
 
