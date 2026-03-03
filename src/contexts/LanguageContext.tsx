@@ -125,7 +125,7 @@ const translations = {
     // Projects
     'projects.title': 'Wo ich meine Zeit investiere',
     'projects.family': 'Familie',
-    'projects.impro': 'Improv Comedy',
+    'projects.impro': 'Impro Comedy',
     'projects.tech': 'Tech',
     'projects.impro.player': 'Ich als Spieler (olidefux)',
     'projects.impro.zagewahu': 'ZaGeWaHu - Impro für Kinder',
