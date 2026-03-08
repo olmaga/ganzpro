@@ -339,8 +339,8 @@ const shows = [
       website: '',
     },
     description: {
-      en: 'Performers from various improv groups spin a full-length story from nothing. This evening: «No. 17 Main Street» – a multi-family house full of life, stories, and quiet secrets.',
-      de: 'Performer aus verschiedenen Improgruppen spinnen eine abendfüllende Geschichte aus dem Nichts. Heute Abend: «No. 17 Main Street» – ein Mehrfamilienhaus voller Leben, Geschichten und stiller Geheimnisse.',
+      en: 'Improvisers from various groups create a full-length story from nothing. Community event with campfire after the show.',
+      de: 'Improvisierende aus verschiedenen Gruppen erschaffen eine abendfüllende Geschichte aus dem Nichts. Community-Event mit Lagerfeuer nach der Show.',
     },
     venue: 'Theater Ida',
     address: 'Aargauerstrasse 80, Zürich',
