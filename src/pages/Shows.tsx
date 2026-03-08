@@ -88,6 +88,26 @@ const shows = [
     ticketUrl: 'https://elefant.ch/',
   },
   {
+    day: '10',
+    month: 'Apr',
+    year: '2026',
+    time: '19:30 – 21:45 Uhr',
+    title: 'Theatersportliga',
+    group: {
+      name: 'zweierlei',
+      instagram: 'https://instagram.com/zweierlei.impro',
+      website: 'https://zweierlei-impro.ch',
+    },
+    description: {
+      en: 'We play Theatersportliga - with/against Toastmakers.',
+      de: 'Wir spielen Theatersportliga - mit/gegen Toastmakers.',
+    },
+    venue: 'Theater Ida',
+    address: 'Aargauerstrasse 80, Zürich',
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Theater+Ida+Aargauerstrasse+80+Zürich',
+    ticketUrl: 'https://eventfrog.ch/de/p/theater-buehne/theater/ida-theatersport-liga-10-04-2026-de-7428910536966856406.html',
+  },
+  {
     day: '12',
     month: 'Apr',
     year: '2026',
