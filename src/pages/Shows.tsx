@@ -328,6 +328,26 @@ const shows = [
     ticketUrl: 'https://eventfrog.ch/de/p/theater-buehne/comedy-kabarett/mier-sind-aenart-zweierlei-7434192659260938285.html',
   },
   {
+    day: '12',
+    month: 'Jun',
+    year: '2026',
+    time: '20:00 – 22:15 Uhr',
+    title: 'The Urban Campfire «No. 17 Main Street»',
+    group: {
+      name: 'The Urban Campfire',
+      instagram: '',
+      website: '',
+    },
+    description: {
+      en: 'Performers from various improv groups spin a full-length story from nothing. This evening: «No. 17 Main Street» – a multi-family house full of life, stories, and quiet secrets.',
+      de: 'Performer aus verschiedenen Improgruppen spinnen eine abendfüllende Geschichte aus dem Nichts. Heute Abend: «No. 17 Main Street» – ein Mehrfamilienhaus voller Leben, Geschichten und stiller Geheimnisse.',
+    },
+    venue: 'Theater Ida',
+    address: 'Aargauerstrasse 80, Zürich',
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Theater+Ida+Aargauerstrasse+80+Zürich',
+    ticketUrl: 'https://eventfrog.ch/de/p/theater-buehne/theater/the-urban-campfire-no-17-main-street-en-7431017318010849053.html',
+  },
+  {
     day: '21',
     month: 'Jun',
     year: '2026',
