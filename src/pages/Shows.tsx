@@ -88,6 +88,26 @@ const shows = [
     ticketUrl: 'https://elefant.ch/',
   },
   {
+    day: '10',
+    month: 'Apr',
+    year: '2026',
+    time: '19:30 – 21:45 Uhr',
+    title: 'Theatersportliga',
+    group: {
+      name: 'zweierlei',
+      instagram: 'https://instagram.com/zweierlei.impro',
+      website: 'https://zweierlei-impro.ch',
+    },
+    description: {
+      en: 'We play Theatersportliga - with/against Toastmakers.',
+      de: 'Wir spielen Theatersportliga - mit/gegen Toastmakers.',
+    },
+    venue: 'Theater Ida',
+    address: 'Aargauerstrasse 80, Zürich',
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Theater+Ida+Aargauerstrasse+80+Zürich',
+    ticketUrl: 'https://eventfrog.ch/de/p/theater-buehne/theater/ida-theatersport-liga-10-04-2026-de-7428910536966856406.html',
+  },
+  {
     day: '12',
     month: 'Apr',
     year: '2026',
@@ -206,6 +226,26 @@ const shows = [
     address: 'Zollstrasse 121, Zürich',
     mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Theater+im+Zollhaus+Zollstrasse+121+Zürich',
     ticketUrl: 'https://pfirsi.ch/events/anundpfirsich/show1777_sa.-23-05-2026_theatersport/',
+  },
+  {
+    day: '31',
+    month: 'May',
+    year: '2026',
+    time: '19:30 – 21:45 Uhr',
+    title: 'Theatersportliga',
+    group: {
+      name: 'zweierlei',
+      instagram: 'https://instagram.com/zweierlei.impro',
+      website: 'https://zweierlei-impro.ch',
+    },
+    description: {
+      en: 'We play Theatersport.',
+      de: 'Wir spielen Theatersport.',
+    },
+    venue: 'Theater Ida',
+    address: 'Aargauerstrasse 80, Zürich',
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Theater+Ida+Aargauerstrasse+80+Zürich',
+    ticketUrl: 'https://eventfrog.ch/de/p/theater-buehne/theater/ida-theatersport-liga-31-05-2026-de-7428916157187418774.html',
   },
   {
     day: '06',
