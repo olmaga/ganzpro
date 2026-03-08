@@ -88,26 +88,6 @@ const shows = [
     ticketUrl: 'https://elefant.ch/',
   },
   {
-    day: '27',
-    month: 'Mar',
-    year: '2026',
-    time: '19:30 – 22:00 Uhr',
-    title: 'The Great Piggybank Showcase',
-    group: {
-      name: 'Piggybank',
-      instagram: '',
-      website: 'https://www.theaterida.ch',
-    },
-    description: {
-      en: 'I play in a Maestro-like format with & against many other players from the community. All against all.',
-      de: 'Ich spiele in einem Maestro-ähnlichen Format mit & gegen viele andere Spieler:innen aus der Community. Alle gegen Alle.',
-    },
-    venue: 'Theater Ida',
-    address: 'Aargauerstrasse 80, Zürich',
-    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Theater+Ida+Aargauerstrasse+80+Zürich',
-    ticketUrl: 'https://www.theaterida.ch/event/the-great-piggybank-showcase/',
-  },
-  {
     day: '12',
     month: 'Apr',
     year: '2026',
