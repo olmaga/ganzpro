@@ -327,6 +327,26 @@ const shows = [
     mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Dynamo+Werk+21+Zürich',
     ticketUrl: 'https://eventfrog.ch/de/p/theater-buehne/comedy-kabarett/mier-sind-aenart-zweierlei-7434192659260938285.html',
   },
+  {
+    day: '21',
+    month: 'Jun',
+    year: '2026',
+    time: '19:30 Uhr',
+    title: 'Theatersport-Liga',
+    group: {
+      name: 'Theater Freudig',
+      instagram: '',
+      website: 'https://theaterfreudig.ch',
+    },
+    description: {
+      en: 'Theatersport-Liga at Theater Ida.',
+      de: 'Theatersport-Liga im Theater Ida.',
+    },
+    venue: 'Theater Ida',
+    address: 'Aargauerstrasse 80, Zürich',
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Theater+Ida+Aargauerstrasse+80+Zürich',
+    ticketUrl: 'https://eventfrog.ch/de/p/theater-buehne/theater/ida-theatersport-liga-21-06-2026-de-7434258646458971771.html',
+  },
 ];
 
 const monthToNumber: Record<string, number> = {
