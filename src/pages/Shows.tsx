@@ -367,6 +367,26 @@ const shows = [
     mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Theater+Ida+Aargauerstrasse+80+Zürich',
     ticketUrl: 'https://eventfrog.ch/de/p/theater-buehne/theater/ida-theatersport-liga-21-06-2026-de-7434258646458971771.html',
   },
+  {
+    day: '29',
+    month: 'Aug',
+    year: '2026',
+    time: '20:00 – 22:30 Uhr',
+    title: 'Maestro™',
+    group: {
+      name: 'anundpfirsich',
+      instagram: 'https://instagram.com/anundpfirsich',
+      website: 'https://pfirsi.ch',
+    },
+    description: {
+      en: 'Switzerland\'s most successful improv comedy show. 10 improvisers compete – the audience decides who becomes the Maestro™ of the evening.',
+      de: 'Die erfolgreichste Impro-Comedy-Show der Schweiz. 10 Spieler:innen treten gegeneinander an – das Publikum entscheidet, wer Maestro™ des Abends wird.',
+    },
+    venue: 'Theater im Zollhaus',
+    address: 'Zollstrasse 121, 8005 Zürich',
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Theater+im+Zollhaus+Zollstrasse+121+Zürich',
+    ticketUrl: 'https://pfirsi.ch/impro-shows/maestro-2026-08-29-20-00',
+  },
 ];
 
 const monthToNumber: Record<string, number> = {
