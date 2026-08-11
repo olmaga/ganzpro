@@ -608,26 +608,6 @@ const shows = [
     ticketUrl: 'https://pfirsi.ch/impro-shows/die-nachwuchs-ensemble-show-harold-2026-12-14-19-30',
   },
   {
-    day: '25',
-    month: 'Jan',
-    year: '2027',
-    time: '19:30 – 21:30 Uhr',
-    title: 'Nachwuchs-Ensemble: «HAROLD»',
-    group: {
-      name: 'anundpfirsich Nachwuchs-Ensemble',
-      instagram: 'https://instagram.com/anundpfirsich',
-      website: 'https://pfirsi.ch',
-    },
-    description: {
-      en: 'The young ensemble performs the HAROLD – the original long-form from Chicago.',
-      de: 'Das Nachwuchs-Ensemble spielt den HAROLD – die Urform der Impro-Langformen aus Chicago.',
-    },
-    venue: 'töpferei',
-    address: 'Töpferstrasse 26, 8045 Zürich',
-    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Töpferstrasse+26+8045+Zürich',
-    ticketUrl: 'https://pfirsi.ch/impro-shows/die-nachwuchs-ensemble-show-harold-2027-01-25-19-30',
-  },
-  {
     day: '22',
     month: 'Jan',
     year: '2027',
@@ -646,6 +626,26 @@ const shows = [
     address: 'Aargauerstrasse 80, 8048 Zürich',
     mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Theater+Ida+Aargauerstrasse+80+Zürich',
     ticketUrl: 'https://eventfrog.ch/de/p/theater-buehne/theater/ida-theatersport-liga-22-01-2027-de-7479878078648290148.html',
+  },
+  {
+    day: '25',
+    month: 'Jan',
+    year: '2027',
+    time: '19:30 – 21:30 Uhr',
+    title: 'Nachwuchs-Ensemble: «HAROLD»',
+    group: {
+      name: 'anundpfirsich Nachwuchs-Ensemble',
+      instagram: 'https://instagram.com/anundpfirsich',
+      website: 'https://pfirsi.ch',
+    },
+    description: {
+      en: 'The young ensemble performs the HAROLD – the original long-form from Chicago.',
+      de: 'Das Nachwuchs-Ensemble spielt den HAROLD – die Urform der Impro-Langformen aus Chicago.',
+    },
+    venue: 'töpferei',
+    address: 'Töpferstrasse 26, 8045 Zürich',
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Töpferstrasse+26+8045+Zürich',
+    ticketUrl: 'https://pfirsi.ch/impro-shows/die-nachwuchs-ensemble-show-harold-2027-01-25-19-30',
   },
   {
     day: '30',
