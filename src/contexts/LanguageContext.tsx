@@ -9,6 +9,8 @@ interface LanguageContextType {
 }
 
 const getBrowserLanguage = (): Language => {
+  // SSR-safe: navigator only exists in the browser.
+  if (typeof navigator === 'undefined') return 'en';
   const browserLang = navigator.language || navigator.languages?.[0] || 'en';
   return browserLang.toLowerCase().startsWith('de') ? 'de' : 'en';
 };
@@ -145,7 +147,14 @@ const translations = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>(getBrowserLanguage);
+  // Start with 'en' on both server and client so SSR markup matches during
+  // hydration, then switch to the detected browser language after mount.
+  const [language, setLanguage] = useState<Language>('en');
+
+  useEffect(() => {
+    const detected = getBrowserLanguage();
+    setLanguage((current) => (current === detected ? current : detected));
+  }, []);
 
   const t = (key: string): string => {
     return translations[language][key as keyof typeof translations['en']] || key;

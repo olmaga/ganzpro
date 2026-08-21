@@ -1,6 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Heart, Theater, Code, Instagram, MessageCircle, ExternalLink, Calendar } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link } from '@/lib/router-compat';
 import { Button } from '@/components/ui/button';
 import familyCartoon from '@/assets/family-cartoon.png';
 import improTheater from '@/assets/impro-theater.png';
