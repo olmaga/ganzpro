@@ -681,7 +681,7 @@ function ShowsContent() {
   const upcomingShows = shows.filter((show) => {
     const showDate = new Date(
       parseInt(show.year),
-      monthToNumber[show.month],
+      monthToNumber[show.month] ?? 0,
       parseInt(show.day),
       23, 59, 59 // End of the show day
     );
