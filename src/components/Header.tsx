@@ -1,6 +1,6 @@
 import { LanguageToggle } from './LanguageToggle';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from '@/lib/router-compat';
 import profileImg from '@/assets/profile.jpg';
 
 export function Header() {
