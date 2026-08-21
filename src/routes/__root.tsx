@@ -41,7 +41,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1.0" },
-      { title: "Oliver Ganz | ganz.pro - Projects That Make The World Better" },
+      { title: "Oliver Ganz | Projects That Make The World Better" },
       {
         name: "description",
         content:
@@ -52,10 +52,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         name: "keywords",
         content: "Oliver Ganz, CTO, Entrepreneur, TestingTime, Zurich, Tech, Startup, Consulting",
       },
-      { property: "og:title", content: "Oliver Ganz | ganz.pro" },
+      { property: "og:title", content: "Oliver Ganz | Projects That Make The World Better" },
       {
         property: "og:description",
-        content: "I help with projects that make the world better. Tech entrepreneur based in Zurich.",
+        content:
+          "Oliver Ganz - Tech entrepreneur, CTO & Co-Founder. I help with projects that make the world better. Based in Zurich, Switzerland.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://ganz.pro" },
@@ -65,10 +66,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:locale", content: "de_CH" },
       { property: "og:locale:alternate", content: "en_US" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Oliver Ganz | ganz.pro" },
+      { name: "twitter:title", content: "Oliver Ganz | Projects That Make The World Better" },
       {
         name: "twitter:description",
-        content: "I help with projects that make the world better.",
+        content:
+          "Oliver Ganz - Tech entrepreneur, CTO & Co-Founder. I help with projects that make the world better. Based in Zurich, Switzerland.",
       },
       { name: "twitter:image", content: "https://ganz.pro/og-image.jpg" },
     ],
