@@ -448,6 +448,26 @@ const shows = [
     ticketUrl: 'https://eventfrog.ch/de/p/theater-buehne/theater/ida-theatersport-liga-27-09-2026-de-7479457610850117813.html',
   },
   {
+    day: '04',
+    month: 'Oct',
+    year: '2026',
+    time: '19:00 – 21:30 Uhr',
+    title: 'Community Stage',
+    group: {
+      name: 'zweierlei',
+      instagram: 'https://instagram.com/zweierlei.impro',
+      website: 'https://zweierlei-impro.ch',
+    },
+    description: {
+      en: 'zweierlei takes the stage at the Community Stage in the töpferei – an evening celebrating the improv community.',
+      de: 'zweierlei auf der Community Stage in der töpferei – ein Abend, der die Impro-Community feiert.',
+    },
+    venue: 'töpferei',
+    address: 'Töpferstrasse 26, 8045 Zürich',
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Töpferstrasse+26+8045+Zürich',
+    ticketUrl: 'https://www.pfirsi.ch/impro-shows/community-stage-2026-10-04-19-00',
+  },
+  {
     day: '05',
     month: 'Oct',
     year: '2026',
