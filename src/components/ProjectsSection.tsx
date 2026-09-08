@@ -85,6 +85,8 @@ export const ProjectsSection = () => {
         {
           name: 'Vibe Coding',
           links: [
+            { type: 'website', url: 'https://pfirsi.ch', label: 'pfirsi.ch' },
+            { type: 'website', url: 'https://naturplan-ag.ch', label: 'naturplan-ag.ch' },
             { type: 'website', url: 'https://impro-shows.ch', label: 'impro-shows.ch' },
             { type: 'website', url: 'https://my-tidbits.com', label: 'my-tidbits.com' },
           ],
