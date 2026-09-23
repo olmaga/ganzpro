@@ -528,6 +528,26 @@ const shows = [
     ticketUrl: 'https://eventfrog.ch/de/p/theater-buehne/theater/ida-theatersport-liga-16-10-2026-en-7479143084963433965.html',
   },
   {
+    day: '22',
+    month: 'Oct',
+    year: '2026',
+    time: '20:00 – 22:00 Uhr',
+    title: 'Drei Duos am Dritten Donnerstag',
+    group: {
+      name: 'zweierlei',
+      instagram: 'https://instagram.com/zweierlei.impro',
+      website: 'https://zweierlei-impro.ch',
+    },
+    description: {
+      en: 'Three improv duos on one stage: R-OLI, RomTom and zweierlei – with live music by Demian, hosted by Gwendolyn.',
+      de: 'Drei Impro-Duos auf einer Bühne: R-OLI, RomTom und zweierlei – live musikalisch begleitet von Demian, moderiert von Gwendolyn.',
+    },
+    venue: 'Theater Ida',
+    address: 'Aargauerstrasse 80, 8048 Zürich',
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Theater+Ida+Aargauerstrasse+80+Zürich',
+    ticketUrl: 'https://eventfrog.ch/de/p/theater-buehne/theater/drei-duos-am-dritten-donnerstag-improtheater-7496582258268054990.html',
+  },
+  {
     day: '02',
     month: 'Nov',
     year: '2026',
