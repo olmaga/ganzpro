@@ -64,11 +64,9 @@ export const ProjectsSection = () => {
         },
         {
           name: 'Theater Freudig',
-          links: [],
-        },
-        {
-          nameKey: 'projects.impro.zagewahu',
-          links: [{ type: 'instagram', url: 'https://instagram.com/zagewahu' }],
+          links: [
+            { type: 'website', url: 'https://theaterfreudig.ch' },
+          ],
         },
       ],
       image: improTheater,
