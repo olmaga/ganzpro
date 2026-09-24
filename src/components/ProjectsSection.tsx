@@ -16,6 +16,7 @@ interface ProjectItem {
   name?: string;
   nameKey?: string;
   links?: ProjectLink[];
+  stackLinks?: boolean;
 }
 
 interface ProjectGroup {
@@ -84,6 +85,7 @@ export const ProjectsSection = () => {
       items: [
         {
           name: 'Vibe Coding',
+          stackLinks: true,
           links: [
             { type: 'website', url: 'https://pfirsi.ch', label: 'pfirsi.ch' },
             { type: 'website', url: 'https://naturplan-ag.ch', label: 'naturplan-ag.ch' },
@@ -153,7 +155,7 @@ export const ProjectsSection = () => {
                           {item.nameKey ? t(item.nameKey) : item.name}
                         </span>
                         {item.links && item.links.length > 0 && (
-                          <div className="flex flex-wrap gap-2">
+                          <div className={item.stackLinks ? 'flex flex-col items-start gap-2' : 'flex flex-wrap gap-2'}>
                             {item.links.map((link, linkIndex) => (
                               <a
                                 key={linkIndex}
